@@ -4,8 +4,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const ANTHROPIC_API_KEY = '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';
-const UNDETECTABLE_API_KEY = 'ea02a5ab-da67-4ab3-8050-77ebe23c1cb6';
+const ANTHROPIC_API_KEY = 'YOUR_ANTHROPIC_API_KEY_HERE';
+const UNDETECTABLE_API_KEY = 'YOUR_UNDETECTABLE_API_KEY_HERE';
 
 // ── CLAUDE for chat and all other tools ──
 async function askClaude(system, messages, maxTokens = 2048) {
