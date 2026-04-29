@@ -37,11 +37,11 @@ async function humanizeWithUndetectable(text, readability, purpose) {
   const submitRes = await fetch('https://humanize.undetectable.ai/submit', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'apikey': UNDETECTABLE_API_KEY },
-    body: JSON.stringify({ content: text, readability: readability || 'High School', purpose: purpose || 'General Writing', strength: 'More Human' })
+    body: JSON.stringify({ content: text, readability: readability || 'High School', purpose: purpose || 'General Writing', strength: 'More Human', userId: process.env.UNDETECTABLE_USER_ID })
   });
   const submitData = await submitRes.json();
   console.log('UNDETECTABLE SUBMIT:', JSON.stringify(submitData));
-  if (!submitData.id) throw new Error('Undetectable submit failed');
+  if (!submitData.id) throw new Error('Undetectable submit failed: ' + JSON.stringify(submitData));
   const docId = submitData.id;
   for (let i = 0; i < 10; i++) {
     await new Promise(r => setTimeout(r, 3000));
