@@ -869,7 +869,7 @@ textarea::placeholder{color:var(--ink4);}
         </div>
         <div class="set-sec">
           <div class="set-sec-t">API Configuration</div>
-          <div class="set-row"><div style="width:100%"><div class="si-t">Backend server URL</div><div class="si-s">The URL of your running server.js backend</div><input class="api-input" id="api-url-input" placeholder="http://localhost:3000" onchange="localStorage.setItem('sai_api',this.value);showToast('✓','API URL saved');"/></div></div>
+          <div class="set-row"><div style="width:100%"><div class="si-t">Backend server URL</div><div class="si-s">The URL of your running server.js backend</div><input class="api-input" id="api-url-input" placeholder="https://swiftai-backend-24yo.onrender.com" onchange="localStorage.setItem('sai_api',this.value);showToast('✓','API URL saved');"/></div></div>
         </div>
         <div class="set-sec">
           <div class="set-sec-t">Keyboard Shortcuts</div>
@@ -969,7 +969,7 @@ textarea::placeholder{color:var(--ink4);}
 <script>
 /* ═══════════════ CONFIG ═══════════════ */
 const LIMIT=999;
-let API=localStorage.getItem('sai_api')||'http://localhost:3000';
+let API=localStorage.getItem('sai_api')||'https://swiftai-backend-24yo.onrender.com';
 let chatHistory=[],currentTone='casual',isAnnual=false;
 let histItems=JSON.parse(localStorage.getItem('sai_hist')||'[]');
 let settings=JSON.parse(localStorage.getItem('sai_set')||'{"history":true,"toasts":true}');
