@@ -4,7 +4,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const ANTHROPIC_API_KEY = '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';
+const ANTHROPIC_API_KEY = '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';
 const UNDETECTABLE_API_KEY = 'ea02a5ab-da67-4ab3-8050-77ebe23c1cb6';
 
 // ── CLAUDE for chat and all other tools ──
